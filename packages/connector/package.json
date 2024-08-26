@@ -1,0 +1,16 @@
+{
+  "name": "connector",
+  "scripts": {
+    "dev": "imba -w -s server.imba",
+    "build": "imba build server.imba",
+    "preview": "node dist/server.js",
+    "prod": "npx pm2 start dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "imba": "^2.0.0-alpha.236"
+  }
+}

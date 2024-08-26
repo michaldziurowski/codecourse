@@ -1,0 +1,13 @@
+{
+  "name": "builder",
+  "scripts": {
+    "dev": "touch ./data/index.imba && imba -w ./data/index.imba"
+  },
+  "devDependencies": {
+    "imba": "^2.0.0-alpha.236"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.637.0",
+    "@aws-sdk/lib-dynamodb": "^3.637.0"
+  }
+}

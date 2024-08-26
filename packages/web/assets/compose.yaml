@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  connector:
+    image: michaldziurowski/codecourse-connector:latest
+    ports:
+      - "5413:8443" 
+    volumes:
+      - "./:/app/data"
+
+  builder:
+    image: michaldziurowski/codecourse-builder:latest
+    volumes:
+      - "./:/app/data"
+  
+  dynamo:
+    image: amazon/dynamodb-local
+    ports:
+      - "5415:8000"

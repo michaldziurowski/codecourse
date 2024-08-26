@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "scripts": {
+    "dev": "mkdir -p data && imba -w -s server.imba",
+    "build": "imba build server.imba",
+    "preview": "node dist/server.js",
+    "prod": "npx pm2 start dist/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.2.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "imba": "^2.0.0-alpha.236"
+  }
+}

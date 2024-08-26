@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  connector:
+    build:
+      context: ./packages/connector
+    ports:
+      - "5410:8000"
+      - "5413:8443"
+    volumes:
+      - "./:/app/data"
+
+  builder:
+    build:
+      context: ./packages/builder
+    volumes:
+      - "./:/app/data"
+
+  dynamo:
+    image: amazon/dynamodb-local
+    ports:
+      - "5415:8000"
